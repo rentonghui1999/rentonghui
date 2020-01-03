@@ -5,7 +5,8 @@
     <el-button type="danger" size="small">批量删除</el-button>
     <!-- /按钮 -->
     <!-- 表格 -->
-    <el-table :data="customers">
+    <el-table :data="customers" tooltip-effect="dark" ref="multipleTable" @selection-change="handleSelectionChange">
+      <el-table-column type="selection" width="55" align="center"></el-table-column>
       <el-table-column prop="id" label="编号"></el-table-column>
       <el-table-column prop="realname" label="姓名"></el-table-column>
       <el-table-column prop="telephone" label="联系方式"></el-table-column>
